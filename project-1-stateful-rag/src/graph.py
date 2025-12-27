@@ -16,6 +16,8 @@ workflow.add_edge("retrieve", "grade_documents")
 def decide_to_generate(state: AgentState) -> Dict[str, Any]:
     if state.retry_count >= 3:
         return "end_max_retries"
+    elif state.needs_rewrite:
+        return "rewrite"
     else:
         return "generate"
 workflow.add_conditional_edges("grade_documents", decide_to_generate, {

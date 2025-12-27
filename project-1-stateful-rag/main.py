@@ -5,7 +5,7 @@ if __name__ == "__main__":
         "query": "What is LangGraph?",
         "original_query": "What is LangGraph?",
         "documents": [{"page_content": "doc1"}, {"page_content": "doc2"}, {"page_content": "doc3"}],
-        "retry_count": 0
+        "retry_count": 1
     }
     
     # Run the graph

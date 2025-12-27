@@ -8,3 +8,4 @@ class AgentState(BaseModel):
     relevance_score: Optional[List[float]] = None 
     final_answer: Optional[str] = None
     retry_count: int = 0
+    needs_rewrite: bool = False

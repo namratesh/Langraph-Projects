@@ -15,10 +15,10 @@ def grade_documents(state: AgentState) -> Dict[str, Any]:
     # If the retry count is > 0, simulate "Success" to exit the loop.
     if state.retry_count == 0:
         print("-> Found irrelevant docs, filtering them out.")
-        return {"documents": []} # Empty list triggers the rewrite
+        return {"needs_rewrite": True}
     else:
         print("-> Docs are good now.")
-        return {"documents": state.documents} # Keep docs
+        return {"needs_rewrite": False}
 
 def rewrite_query(state: AgentState) -> Dict[str, Any]:
     print(f"---REWRITE QUERY---")
