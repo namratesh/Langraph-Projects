@@ -51,11 +51,10 @@ Each project is self-contained in its own directory. To run a project:
     ```bash
     cd Project-X-Name
     ```
-2.  Install the dependencies (ensure you have the necessary API keys set up, e.g., `OPENAI_API_KEY`, `TAVILY_API_KEY`):
-    ```bash
+
     pip install -r requirements.txt
     ```
-3.  Run the entry point (usually `main.py` or `graph.py`):
+2.  Run the entry point (usually `main.py` or `graph.py`):
     ```bash
     python main.py
     ```
